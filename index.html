@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+<!-- SEO -->
+<title>Bulgari Ink Seminyak | Tattoo Studio Bali</title>
+<meta name="description" content="Premium tattoo studio in Seminyak Bali. Custom tattoo, realism, blackwork. Book now via WhatsApp.">
+<meta name="keywords" content="tattoo bali, tattoo seminyak, bali tattoo studio, tattoo near me, tattoo indonesia">
+<meta name="author" content="Bulgari Ink Seminyak">
+
+<!--  OPEN GRAPH -->
+<meta property="og:title" content="Bulgari Ink Seminyak">
+<meta property="og:description" content="Premium Tattoo Studio in Bali for international clients">
+<meta property="og:image" content="img/awal.jpeg">
+<meta property="og:type" content="website">
+
+<!-- GOOGLE SCHEMA -->
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "TattooParlor",
+ "name": "Bulgari Ink Seminyak",
+ "address": {
+   "@type": "PostalAddress",
+   "streetAddress": "Jl. Raya Basangkasa No.75",
+   "addressLocality": "Seminyak",
+   "addressRegion": "Bali",
+   "addressCountry": "ID"
+ },
+ "telephone": "+6287853047519",
+ "openingHours": "Mo-Sa 09:00-21:00"
+}
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="icon" type="image/png" href="img/logo.png">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+html{scroll-behavior:smooth;}
+body{background:#000;color:#fff;}
+
+/* JUDUL SEMUA SECTION (DITAMBAH) */
+section h2{
+text-align:center;
+font-size:2.2rem;
+letter-spacing:2px;
+margin-bottom:40px;
+position:relative;
+}
+section h2::after{
+content:'';
+width:60px;
+height:3px;
+background:#00ffc3;
+display:block;
+margin:10px auto;
+border-radius:10px;
+}
+
+/* NAV */
+nav{
+position:fixed;width:100%;padding:15px 30px;
+display:flex;justify-content:space-between;align-items:center;
+background:rgba(0,0,0,0.6);backdrop-filter:blur(10px);z-index:1000;
+}
+
+.logo{font-size:22px;font-weight:bold;color:#00ffc3;}
+.logo{
+display:flex;
+align-items:center;
+gap:10px;
+font-size:20px;
+font-weight:bold;
+color:#00ffc3;
+}
+
+.logo img{
+width:40px;
+height:40px;
+border-radius:50%;
+object-fit:cover;
+}
+
+.menu{display:flex;}
+.menu a{margin:0 15px;text-decoration:none;color:#fff;}
+.menu a:hover{color:#00ffc3;}
+
+.hamburger{display:none;font-size:25px;cursor:pointer;}
+
+/* MOBILE */
+@media(max-width:768px){
+.menu{
+display:none;
+flex-direction:column;
+position:absolute;
+top:70px;right:0;
+background:#000;
+width:200px;
+padding:20px;
+}
+.menu.active{display:flex;}
+.hamburger{display:block;}
+}
+
+/* HERO */
+.hero{
+height:100vh;
+background:url('img/awal.jpeg') center/cover;
+display:flex;align-items:center;justify-content:center;text-align:center;
+position:relative;
+}
+
+.hero::before{
+content:'';
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.5);
+}
+
+.overlay{
+position:relative;
+padding:20px;
+animation:fade 1.5s;
+}
+
+h1{font-size:3rem;letter-spacing:2px;}
+
+.btn{
+padding:12px 25px;background:#00ffc3;color:#000;border:none;margin:10px;cursor:pointer;
+}
+.btn:hover{background:#00cfa0;}
+
+section{padding:80px 10%;}
+
+/* ABOUT */
+/* ABOUT */
+.about {
+  display: flex;
+  gap: 40px;
+  align-items: flex-start; /* biar teks mulai dari atas, bukan tengah */
+}
+
+.about img {
+  width: 350px;
+  border-radius: 10px;
+  flex-shrink: 0; /* gambar tidak ikut mengecil */
+}
+.about div p {
+  text-align: justify;
+  line-height: 1.7;
+  margin-bottom: 15px;
+}
+.about div {
+  max-width: 600px; /* batasi lebar teks biar tidak terlalu panjang */
+  line-height: 1.6;
+}
+
+/* PORTFOLIO */
+.portfolio{
+background:url('img/download (11).jpeg') center/cover;
+background-attachment:fixed;
+}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+  gap:25px;
+}
+
+.grid img{
+width:100%;
+height:250px; /* kunci biar sama */
+object-fit:cover;
+border-radius:12px;
+transition:0.3s;
+}
+
+.item{
+  transition:0.4s ease;
+}
+
+.grid img{
+  width: 100%;
+  
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  object-fit: cover;
+  transition: all 0.3s ease;
+ 
+}
+
+.grid img:hover{
+  transform: scale(1.03);
+  filter: brightness(0.85);
+}
+
+.grid img:hover{
+transform:scale(1.05);
+filter:brightness(80%);
+}
+/*tambahan*/
+.item{
+display:block;
+}
+
+.featured{
+display:block;
+}
+
+/* FEATURE */
+.feature{
+display:flex;gap:40px;flex-wrap:wrap;align-items:center;
+background:url('') center/cover;
+}
+.feature img{width:350px;border-radius:10px;}
+
+/* CONTACT */
+.contact-wrap{
+display:flex;
+gap:40px;
+flex-wrap:wrap;
+margin-top:30px;
+}
+
+.contact-info{
+flex:1;
+min-width:250px;
+}
+.contact-info i{
+color:#00ffc3;
+margin-right:10px;
+font-size:16px;
+}
+
+.contact-map{
+flex:1;
+min-width:250px;
+}
+
+iframe{
+border-radius:10px;
+width:100%;
+height:300px;
+}
+
+/* BOOKING */
+.booking-form{
+max-width:600px;
+margin:auto;
+}
+.booking-form input,
+.booking-form textarea{
+width:100%;
+padding:12px;
+margin:10px 0;
+background:#111;
+border:none;
+color:#fff;
+}
+
+/* FOOTER */
+footer{
+background:#111;
+padding:60px 10%;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:40px;
+}
+
+footer h3{
+margin-bottom:15px;
+font-weight:600;
+}
+
+footer p, footer a{
+color:#aaa;
+font-size:14px;
+text-decoration:none;
+}
+
+footer a:hover{
+color:#00ffc3;
+}
+
+.social{
+display:flex;
+gap:10px;
+margin-top:10px;
+}
+
+.social img{
+width:20px;
+filter:brightness(0.8);
+}
+
+.social img:hover{
+filter:brightness(1.5);
+}
+
+.copy{
+text-align:center;
+padding:20px;
+background:#000;
+font-size:13px;
+color:#777;
+}
+
+/* WA */
+.wa{
+position:fixed;bottom:20px;right:20px;
+width:60px;height:60px;background:#25D366;
+border-radius:50%;display:flex;align-items:center;justify-content:center;
+box-shadow:0 0 20px rgba(37,211,102,0.7);
+}
+.wa img{width:30px;}
+
+@keyframes fade{
+from{opacity:0;transform:translateY(20px);}
+to{opacity:1;transform:translateY(0);}
+}
+@media (max-width: 768px) {
+  .about {
+    flex-direction: column;
+  }
+
+  .about img {
+    width: 100%;
+  }
+}
+/* RESPONSIVE */
+@media(max-width: 1024px){
+  .grid{
+    column-count: 3;
+  }
+}
+
+@media(max-width: 768px){
+  .grid{
+    column-count: 2;
+  }
+}
+
+@media(max-width:768px){
+  .grid{
+    grid-template-columns:1fr;
+  }
+}
+
+@media(max-width: 480px){
+  .grid{
+    column-count: 1;
+  }
+}
+
+</style>
+</head>
+
+<body>
+
+
+<nav>
+<!-- <div class="logo">BULGARI-INK</div> -->
+<div class="logo">
+<img src="img/logo.png" alt="logo">
+<span>BULGARI INK</span>
+</div>
+
+<div class="menu" id="menu">
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#booking">Booking</a>
+<a href="#contact">Contact</a>
+</div>
+
+<div class="hamburger" onclick="toggleMenu()">☰</div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="hero">
+<div class="overlay">
+<h1>Bulgari Ink Seminyak</h1>
+<p>Premium Tattoo Studio in Bali</p>
+<a href="#portfolio"><button class="btn">View Portfolio</button></a>
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+<h2>About Studio</h2>
+<div class="about">
+<img src="img/download (15).jpeg">
+<div>
+<!-- <p>Professional tattoo studio in Seminyak specializing in custom designs, realism, and blackwork.</p> -->
+<p>
+Welcome to Bulgari Ink Seminyak — where art meets identity. 
+We are a professional tattoo studio based in Seminyak, Bali, specializing in custom designs, realism, and blackwork, crafted for both local and international clients.
+</p>
+
+<p>
+Since 2016, we have been dedicated to creating tattoos with meaning, precision, and exceptional attention to detail. Our experienced artists work closely with you to transform your ideas into timeless artwork you’ll carry with pride for a lifetime.
+</p>
+
+<p>
+We prioritize hygiene, safety, and comfort at every step, using only high-quality equipment and maintaining the highest industry standards to ensure a clean and professional experience.
+</p>
+
+<p>
+More than just a tattoo, this is your story — your identity expressed through art.
+</p>
+</div>
+</div>
+</section>
+
+<!-- PORTFOLIO
+<section id="portfolio" class="portfolio">
+<h2>Portfolio</h2>
+<div class="grid">
+<img src="img/download (1).jpeg">
+<img src="img/download (8).jpeg">
+<img src="img/download (4).jpeg">
+<img src="img/download (5).jpeg">
+</div>
+</section> -->
+<!-- PORTFOLIO -->
+<!-- <section id="portfolio" class="portfolio">
+<h2>Portfolio</h2>
+
+<div class="grid" id="portfolioGrid">
+<img src="img/download (1).jpeg">
+<img src="img/download (8).jpeg">
+<img src="img/download (4).jpeg">
+<img src="img/download (5).jpeg">
+
+<!-TAMBAHAN (HIDDEN DULU) -->
+<!-- <img src="img/download (6).jpeg" class="more-img" style="display:none;">
+<img src="img/download (7).jpeg" class="more-img" style="display:none;">
+<img src="img/download (9).jpeg" class="more-img" style="display:none;">
+<img src="img/download (10).jpeg" class="more-img" style="display:none;">
+</div>
+
+<div style="text-align:center; margin-top:30px;">
+<button class="btn" onclick="togglePortfolio()" id="btnPortfolio">Show More</button>
+</div>
+
+</section> --> 
+<section id="portfolio" class="portfolio">
+<h2>Portfolio</h2>
+
+<!-- FILTER BUTTON (TAMBAHAN BARU) -->
+<div style="text-align:center; margin-bottom:20px;">
+  <button class="btn" onclick="filterPortfolio('all')">All</button>
+  <!-- <button class="btn" onclick="filterPortfolio('japanese')">Japanese</button>
+  <button class="btn" onclick="filterPortfolio('realism')">Realism</button>
+  <button class="btn" onclick="filterPortfolio('blackwork')">Blackwork</button> -->
+<button class="btn" onclick="filterPortfolio('chicano')">Chicano</button>
+<button class="btn" onclick="filterPortfolio('japanese')">Japanese</button>
+<button class="btn" onclick="filterPortfolio('mandala')">Mandala</button>
+<button class="btn" onclick="filterPortfolio('geometric')">Geometric</button>
+<button class="btn" onclick="filterPortfolio('oldschool')">Old School</button>
+<button class="btn" onclick="filterPortfolio('realism')">Realism</button>
+<button class="btn" onclick="filterPortfolio('fineline')">Fine Line</button>
+</div>
+
+<div class="grid" id="portfolioGrid">
+
+<!-- 6 gambar awal (tetap seperti kamu) -->
+<img src="img/chicano/Screenshot_20260415-185032.jpg" class="item chicano featured">
+<img src="img/japanese/IMG-20260415-WA0048.jpg" class="item japanese featured">
+<img src="img/mandala/IMG-20260415-WA0033.jpg" class="item mandala featured">
+<img src="img/geometric/Screenshot_20260415-185131.jpg" class="item geometric featured">
+<img src="img/oldschool/IMG-20260415-WA0001.jpg" class="item oldschool featured">
+<img src="img/realism/IMG-20260415-WA0006.jpg" class="item realism featured">
+
+<!-- TAMBAHAN (HIDDEN DULU) -->
+
+<!--chicano-->
+<img src="img/chicano/IMG-20260415-WA0045.jpg" class="item chicano more-img" style="display:none;">
+<!--japanese-->
+<img src="img/japanese/Screenshot 2026-04-15 204207.png" class="item japanese more-img" style="display:none;">
+<img src="img/japanese/IMG-20260415-WA0004.jpg" class="item japanese more-img" style="display:none;">
+<!--mandala-->
+<img src="img/mandala/IMG-20260415-WA0031.jpg" class="item mandala more-img" style="display:none;">
+<img src="img/mandala/IMG-20260415-WA0035.jpg" class="item mandala more-img" style="display:none;">
+<img src="img/mandala/IMG-20260415-WA0034.jpg" class="item mandala more-img" style="display:none;">
+<!--geometric-->
+<img src="img/geometric/Screenshot_20260415-185136.jpg" class="item geometric more-img" style="display:none;">
+<img src="img/geometric/Screenshot_20260415-185153.jpg" class="item geometric more-img" style="display:none;">
+<!--oldshool-->
+<img src="img/oldschool/IMG-20260415-WA0050.jpg" class="item oldschool more-img" style="display:none;">
+<img src="img/oldschool/Screenshot_20260415-184937.jpg" class="item oldschool more-img" style="display:none;">
+<img src="img/oldschool/Screenshot_20260415-184947.jpg" class="item oldschool more-img" style="display:none;">
+<!--realism-->
+<img src="img/realism/Screenshot 2026-04-15 221627.png" class="item realism more-img" style="display:none;">
+<img src="img/realism/IMG-20260415-WA0006.jpg" class="item realism more-img" style="display:none;">
+<img src="img/realism/Screenshot_20260415-185104.jpg" class="item realism more-img" style="display:none;">
+<img src="img/realism/Screenshot_20260415-185136.jpg class="item realism more-img" style="display:none;">
+<img src="img/realism/Screenshot_20260415-185153.jpg class="item realism more-img" style="display:none;">
+
+<!--fineline-->
+<img src="img/fineline/IMG-20260415-WA0042.jpg" class="item fineline more-img" style="display:none;">
+<img src="img/fineline/IMG-20260415-WA0039.jpg" class="item fineline more-img" style="display:none;">
+<img src="img/fineline/IMG-20260415-WA0041.jpg" class="item fineline more-img" style="display:none;">
+<img src="img/fineline/IMG-20260415-WA0043.jpg" class="item fineline more-img" style="display:none;">
+
+</div>
+
+<!-- <div style="text-align:center; margin-top:30px;">
+<button class="btn" onclick="togglePortfolio()" id="btnPortfolio">Show More</button>
+</div> -->
+
+</section>
+
+<!-- FEATURE -->
+<section class="feature">
+<div>
+<h2>Needle Magic</h2>
+<p>High precision tattooing with artistic storytelling and premium quality.</p>
+<a href="#booking"><button class="btn">Book Now</button></a>
+</div>
+<img src="img/Mulher com tatuagem.jpeg">
+</section>
+
+<!-- BOOKING -->
+<section id="booking">
+<h2>Booking Tattoo</h2>
+
+<div class="booking-form">
+<form onsubmit="sendBooking(); return false;">
+<input type="text" id="name" placeholder="Your Name" required>
+<input type="text" id="contactUser" placeholder="WhatsApp / Email" required>
+<input type="date" id="date" required>
+<textarea id="idea" placeholder="Tattoo Idea" required></textarea>
+
+
+<button class="btn">Send Booking</button>
+</form>
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+<h2>Contact</h2>
+
+<div class="contact-wrap">
+
+<div class="contact-info">
+<p><i class="fa-solid fa-location-dot"></i> Jl. Raya Basangkasa No.75, Seminyak, Bali</p>
+
+<h3>Working Hours</h3>
+<p><i class="fa-regular fa-clock"></i> Monday - Saturday: 09:00 - 21:00</p>
+<p><i class="fa-regular fa-clock"></i> Sunday: Closed</p>
+
+<h3>Contact</h3>
+<p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +62 85939342921</p>
+<p><i class="fa-solid fa-envelope"></i> Email: bulgariinkseminyak@gmail.com</p>
+
+<!-- <a href="https://wa.me/628XXXXXXXXXX" target="_blank">
+<button class="btn">Chat via WhatsApp</button>
+</a> -->
+</div>
+
+<div class="contact-map">
+<iframe src="https://www.google.com/maps?q=Seminyak&output=embed"></iframe>
+</div>
+
+</div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+<div>
+<h3>Bulgari Ink</h3>
+<p>Premium tattoo studio in Bali with international quality and professional artists.</p>
+
+<div class="social">
+  <!-- Facebook -->
+  <a href="https://www.facebook.com/share/18fuR796or/" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook">
+  </a>
+
+  <!-- Instagram -->
+  <a href="https://www.instagram.com/bulgariinklegianbali?igsh=MXJiYWV6NGYyOWxwYQ==" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/2111/2111463.png" alt="Instagram">
+  </a>
+
+  <!-- WhatsApp -->
+  <a href="https://wa.me/6285939342921" target="_blank">
+    <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+  </a>
+</div>
+</div>
+
+<div>
+<h3>Navigation</h3>
+<p><a href="#home">Home</a></p>
+<p><a href="#about">About</a></p>
+<p><a href="#portfolio">Portfolio</a></p>
+<p><a href="#booking">Booking</a></p>
+<p><a href="#contact">Contact</a></p>
+</div>
+
+<div>
+<h3>Working Hours</h3>
+<p>Mon - Sat: 09:00 - 21:00</p>
+<p>Sunday: Closed</p>
+</div>
+
+<div>
+<h3>Contact</h3>
+<p>Bali, Indonesia</p>
+<p>WhatsApp: +6285939342921</p>
+<p>Email: bulgariinkseminyak@gmail.com</p>
+</div>
+</footer>
+
+<div class="copy">
+© 2026 Bulgari Ink Seminyak. All rights reserved.
+</div>
+
+<!-- WA -->
+<a class="wa" href="https://wa.me/6285939342921?text=Hello%20Bulgari%20Ink%20Seminyak,%20I%20would%20like%20to%20book%20a%20tattoo.%0A%0AName:%20%0AConcept:%20%0ASize:%20%0ADate:%20" target="_blank">
+<img src="https://cdn-icons-png.flaticon.com/512/733/733585.png">
+</a>
+
+<script>
+function toggleMenu(){
+document.getElementById("menu").classList.toggle("active");
+}
+
+function sendBooking(){
+let name = document.getElementById("name").value;
+let contact = document.getElementById("contactUser").value;
+let date = document.getElementById("date").value;
+let idea = document.getElementById("idea").value;
+
+let url = "https://wa.me/6285939342921?text="
++ "Hello, I want to book a tattoo.%0A"
++ "Name: " + name + "%0A"
++ "Contact: " + contact + "%0A"
++ "Date: " + date + "%0A"
++ "Idea: " + idea;
+
+window.open(url, '_blank');
+}
+</script>
+<!-- <script>
+function togglePortfolio(){
+let moreImages = document.querySelectorAll(".more-img");
+let btn = document.getElementById("btnPortfolio");
+
+moreImages.forEach(img => {
+if(img.style.display === "none"){
+img.style.display = "block";
+btn.innerText = "Show Less";
+} else {
+img.style.display = "none";
+btn.innerText = "Show More";
+}
+});
+}
+</script> -->
+<!-- <script>
+function filterPortfolio(category){
+
+let items = document.querySelectorAll("#portfolioGrid .item");
+let btn = document.getElementById("btnPortfolio");
+
+// RESET SEMUA
+items.forEach(img=>{
+img.style.display = "none";
+});
+
+// JIKA ALL → tampilkan 4 gambar awal saja
+if(category === "all"){
+
+document.querySelectorAll(".featured").forEach(img=>{
+img.style.display = "block";
+});
+
+btn.innerText = "Show More";
+
+} else {
+
+// tampilkan sesuai kategori
+document.querySelectorAll("#portfolioGrid ." + category)
+.forEach(img=>{
+img.style.display = "block";
+});
+
+btn.innerText = "Show More";
+}
+}
+
+
+// SHOW MORE (HANYA TAMBAHAN DATA)
+function togglePortfolio(){
+
+let moreImages = document.querySelectorAll(".more-img");
+let btn = document.getElementById("btnPortfolio");
+
+moreImages.forEach(img => {
+
+if(img.style.display === "none" || img.style.display === ""){
+
+img.style.display = "block";
+btn.innerText = "Show Less";
+
+}else{
+
+img.style.display = "none";
+btn.innerText = "Show More";
+
+}
+
+});
+}
+/tambahan
+function filterPortfolio(category){
+  let items = document.querySelectorAll("#portfolioGrid .item");
+
+  items.forEach(img => {
+    img.style.display = "none";
+  });
+
+  if(category === "all"){
+    items.forEach(img => {
+      img.style.display = "block";
+    });
+    return;
+  }
+
+  document.querySelectorAll("#portfolioGrid ." + category)
+  .forEach(img => {
+    img.style.display = "block";
+  });
+}
+
+window.addEventListener("scroll", function(){
+  if(window.scrollY === 0){
+    document.querySelectorAll("#portfolioGrid .item")
+    .forEach(img => img.style.display = "block");
+  }
+});
+</script> -->
+<script>
+function filterPortfolio(category){
+  let items = document.querySelectorAll("#portfolioGrid .item");
+
+  items.forEach(img => {
+    img.style.display = "none";
+  });
+
+  if(category === "all"){
+    items.forEach(img => {
+      img.style.display = "block";
+    });
+    return;
+  }
+
+  document.querySelectorAll("#portfolioGrid ." + category)
+  .forEach(img => {
+    img.style.display = "block";
+  });
+}
+
+window.addEventListener("scroll", function(){
+  if(window.scrollY === 0){
+    document.querySelectorAll("#portfolioGrid .item")
+    .forEach(img => img.style.display = "block");
+  }
+});
+//tambahan
+window.addEventListener("scroll", function(){
+
+if(window.scrollY === 0){
+
+let featured = document.querySelectorAll(".featured");
+let more = document.querySelectorAll(".more-img");
+
+featured.forEach(img => img.style.display = "block");
+more.forEach(img => img.style.display = "none");
+
+}
+
+});
+
+</script>
+
+</body>
+</html>
