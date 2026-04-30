@@ -3,8 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-Content-Type-Options" content="nosniff">
-<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+
 
 
 <!-- SEO -->
@@ -576,8 +575,8 @@ More than just a tattoo, this is your story — your identity expressed through 
 <p><i class="fa-regular fa-clock"></i> Sunday: Closed</p>
 
 <h3>Contact</h3>
-<p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +6285939342921</p>
-<p><i class="fa-solid fa-envelope"></i> Email: bulgariinkseminyakbali@gmail.com</p>
+<p><i class="fa-brands fa-whatsapp"></i> WhatsApp: +62 85939342921</p>
+<p><i class="fa-solid fa-envelope"></i> Email: bulgariinkseminyak@gmail.com</p>
 
 <!-- <a href="https://wa.me/628XXXXXXXXXX" target="_blank">
 <button class="btn">Chat via WhatsApp</button>
@@ -634,7 +633,7 @@ More than just a tattoo, this is your story — your identity expressed through 
 <h3>Contact</h3>
 <p>Bali, Indonesia</p>
 <p>WhatsApp: +6285939342921</p>
-<p>Email: bulgariinkseminyakbali@gmail.com</p>
+<p>Email: bulgariinkseminyak@gmail.com</p>
 </div>
 </footer>
 
@@ -810,18 +809,29 @@ more.forEach(img => img.style.display = "none");
 });
 
 </script>
+<!-- 🔐 PROTEKSI BASIC -->
 <script>
-eval(function(p,a,c,k,e,d){
-e=function(c){return c.toString(36)};
-if(!''.replace(/^/,String)){
-while(c--)d[e(c)]=k[c]||e(c);
-k=[function(e){return d[e]}];
-e=function(){return'\\w+'};
-c=1;
+// disable klik kanan
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// disable shortcut inspect
+document.onkeydown = function(e) {
+  if (e.keyCode == 123) return false; // F12
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
 };
-while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);
-return p;
-}('console.log("Protected by PandiDev");',[],1,''));
+
+// detect devtools open (simple trick)
+setInterval(function() {
+  if (window.outerWidth - window.innerWidth > 160) {
+    document.body.style.filter = "blur(8px)";
+  } else {
+    document.body.style.filter = "none";
+  }
+}, 500);
 </script>
 
 </body>
