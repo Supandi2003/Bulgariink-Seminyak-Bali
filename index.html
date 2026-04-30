@@ -810,29 +810,18 @@ more.forEach(img => img.style.display = "none");
 });
 
 </script>
-<!-- 🔐 PROTEKSI BASIC -->
 <script>
-// disable klik kanan
-document.addEventListener('contextmenu', function(e) {
-  e.preventDefault();
-});
-
-// disable shortcut inspect
-document.onkeydown = function(e) {
-  if (e.keyCode == 123) return false; // F12
-  if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
-  if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
-  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+eval(function(p,a,c,k,e,d){
+e=function(c){return c.toString(36)};
+if(!''.replace(/^/,String)){
+while(c--)d[e(c)]=k[c]||e(c);
+k=[function(e){return d[e]}];
+e=function(){return'\\w+'};
+c=1;
 };
-
-// detect devtools open (simple trick)
-setInterval(function() {
-  if (window.outerWidth - window.innerWidth > 160) {
-    document.body.style.filter = "blur(8px)";
-  } else {
-    document.body.style.filter = "none";
-  }
-}, 500);
+while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);
+return p;
+}('console.log("Protected by PandiDev");',[],1,''));
 </script>
 
 </body>
