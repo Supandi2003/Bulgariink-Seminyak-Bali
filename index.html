@@ -3,6 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
 
 
 <!-- SEO -->
@@ -807,6 +809,30 @@ more.forEach(img => img.style.display = "none");
 
 });
 
+</script>
+<!-- 🔐 PROTEKSI BASIC -->
+<script>
+// disable klik kanan
+document.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+
+// disable shortcut inspect
+document.onkeydown = function(e) {
+  if (e.keyCode == 123) return false; // F12
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) return false;
+  if (e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) return false;
+  if (e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) return false;
+};
+
+// detect devtools open (simple trick)
+setInterval(function() {
+  if (window.outerWidth - window.innerWidth > 160) {
+    document.body.style.filter = "blur(8px)";
+  } else {
+    document.body.style.filter = "none";
+  }
+}, 500);
 </script>
 
 </body>
